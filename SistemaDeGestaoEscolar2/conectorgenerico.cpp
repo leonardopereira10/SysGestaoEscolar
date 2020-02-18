@@ -8,7 +8,7 @@
 ConectorGenerico::ConectorGenerico(QString nomeConexao)
 {
    _nomeConexao = nomeConexao;
-   db = QSqlDatabase::cloneDatabase(UtilitarioGeralBD::ObtemBancoDadosDoArquivo(), _nomeConexao);
+   db = QSqlDatabase::cloneDatabase(UtilitarioGeralBD::ObtemBancoDadosDoArquivo(), _nomeConexao);//nomeConexao = modulo que solicitou acesso
    db.open();
 }
 
